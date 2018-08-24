@@ -33,20 +33,20 @@
                     }
                 }
             },
-            applications : {"fioriHtmlBuilder-display":{"additionalInformation":"SAPUI5.Component=fiori.display.purchase.documents.PurchaseDocumentsALP","applicationType":"URL","url":"/webapp/"}}
+            {{applicationsHook}}
         };
     </script>
 
-    <script src="../test-resources/sap/ushell/bootstrap/sandbox.js" id="sap-ushell-bootstrap"></script>
+    <script src="{{pathPrefixHook}}test-resources/sap/ushell/bootstrap/sandbox.js" id="sap-ushell-bootstrap"></script>
 
     <!-- Bootstrap the UI5 core library -->
     <!--data-sap-ui-resourceroots='{"projectNameResRoot": "../"}'-->
     <script id="sap-ui-bootstrap"
-            src="../resources/sap-ui-core.js"
+            src="{{pathPrefixHook}}resources/sap-ui-core.js"
             data-sap-ui-libs="sap.m, sap.ushell, sap.collaboration"
-            data-sap-ui-theme="sap_belize"
+            data-sap-ui-theme="{{themeHook}}"
             data-sap-ui-compatVersion="edge"
-            data-sap-ui-resourceroots='{"fiori.display.purchase.documents.PurchaseDocumentsALP": "./"}'
+            data-sap-ui-resourceroots={{projectNameResRootHook}}
             data-sap-ui-frameOptions='allow'> // NON-SECURE setting for testing environment
     </script>
 
